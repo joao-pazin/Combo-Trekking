@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E2M644K2DK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-E2M644K2DK'); /* ← substitua pelo seu ID GA4 */
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>From Canyons to Lagoons – Insane Brazil | Lençóis Trekking</title>
+
+<!-- SEO -->
+<meta name="description" content="10 days crossing wild Brazil: Vale do Pati in Chapada Diamantina + Lençóis Maranhenses. 96km of trails, two groups in May and August. Limited spots.">
+<meta property="og:title" content="From Canyons to Lagoons: Insane Brazil">
+<meta property="og:description" content="10 days across wild Brazil: Vale do Pati + Lençóis Maranhenses. Limited spots.">
+<meta property="og:image" content="images/hero.png">
+
+<!-- FONTES -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;0,800;0,900;1,700;1,800&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --coral:   #f57f5b;
+  --brown:   #896a41;
+  --blue:    #4294af;
+  --sand:    #dd9e63;
+  --green:   #608652;
+  --cream:   #f5f0e8;
+  --dark:    #1e1a14;
+  --ft: 'Raleway', sans-serif;
+  --fb: 'Poppins', sans-serif;
+}
+*, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; }
+body { font-family:var(--fb); background:var(--cream); color:var(--dark); overflow-x:hidden; }
+img { display:block; width:100%; }
+
+/* ── NAVBAR ── */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:center;
+  padding:16px 28px;
+  background:rgba(30,26,20,.72); backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.nav-inner { display:flex; align-items:center; gap:12px; }
+.nav-logo-img { width:52px; height:52px; object-fit:contain; border-radius:50%; }
+.nav-brand { font-family:var(--ft); font-size:11px; font-weight:800; letter-spacing:3px; text-transform:uppercase; color:#fff; }
+
+/* ── HERO ── */
+.hero {
+  min-height:100vh;
+  background:linear-gradient(160deg, var(--dark) 0%, #2a1f0e 50%, #1a2e35 100%);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  text-align:center; padding:130px 28px 90px; position:relative; overflow:hidden;
+}
+.hero::before {
+  content:''; position:absolute; top:-80px; right:-120px;
+  width:500px; height:500px; background:var(--blue); opacity:.06;
+  border-radius:50%; filter:blur(80px);
+}
+.hero::after {
+  content:''; position:absolute; bottom:-60px; left:-100px;
+  width:400px; height:400px; background:var(--coral); opacity:.08;
+  border-radius:50%; filter:blur(80px);
+}
+.hero-photo {
+  position:absolute; inset:0;
+  background:url('images/hero.png') center/cover no-repeat;
+  opacity:.22;
+}
+.hero-content { position:relative; z-index:2; max-width:820px; }
+.hero-eyebrow {
+  display:inline-flex; align-items:center; gap:10px;
+  background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.15);
+  border-radius:40px; padding:12px 28px; margin-bottom:32px;
+  font-size:15px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--sand);
+}
+.hero-dot { width:6px; height:6px; border-radius:50%; background:var(--coral); animation:pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.4)} }
+
+.hero-title {
+  font-family:var(--ft); font-weight:900; font-style:italic;
+  font-size:clamp(52px,11vw,120px); line-height:.88;
+  color:#fff; margin-bottom:14px;
+}
+.hero-title .highlight { color:var(--coral); display:block; }
+.hero-subtitle {
+  font-family:var(--ft); font-size:clamp(16px,2.8vw,24px); font-weight:700;
+  letter-spacing:5px; text-transform:uppercase; color:var(--sand);
+  margin-bottom:28px;
+}
+.hero-desc {
+  font-size:clamp(15px,2vw,18px); color:rgba(255,255,255,.72);
+  line-height:1.75; max-width:560px; margin:0 auto 40px;
+}
+.hero-grupos { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-bottom:48px; }
+.grupo-badge {
+  background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.15);
+  border-radius:16px; padding:18px 28px; text-align:center; min-width:160px;
+  transition:all .3s;
+}
+.grupo-badge:hover { background:rgba(255,255,255,.12); transform:translateY(-3px); }
+.grupo-badge-label { font-size:10px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:rgba(255,255,255,.45); margin-bottom:6px; }
+.grupo-badge-mes { font-family:var(--ft); font-size:28px; font-weight:800; color:#fff; margin-bottom:4px; }
+.grupo-badge-vagas { font-size:12px; font-weight:700; }
+.grupo-badge.maio .grupo-badge-vagas { color:var(--coral); }
+.grupo-badge.agosto .grupo-badge-vagas { color:var(--blue); }
+
+.hero-cta { display:inline-block; }
+.btn {
+  display:inline-block; font-family:var(--fb); font-weight:800; font-size:16px;
+  padding:18px 44px; border-radius:50px; text-decoration:none; transition:all .3s; cursor:pointer;
+}
+.btn-coral { background:var(--coral); color:#fff; box-shadow:0 10px 40px rgba(245,127,91,.45); border:none; }
+.btn-coral:hover { background:#e5703e; transform:translateY(-4px); box-shadow:0 18px 50px rgba(245,127,91,.55); }
+.btn-blue { background:var(--blue); color:#fff; border:none; }
+.btn-blue:hover { background:#337e97; transform:translateY(-3px); }
+.btn-outline { background:transparent; color:#fff; border:2px solid rgba(255,255,255,.35); }
+.btn-outline:hover { border-color:#fff; background:rgba(255,255,255,.08); }
+.hero-scroll { position:absolute; bottom:32px; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:6px; }
+.scroll-text { font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,.3); }
+.scroll-line { width:1px; height:44px; background:linear-gradient(to bottom,rgba(255,255,255,.5),transparent); animation:scrollFade 2s ease-in-out infinite; }
+@keyframes scrollFade { 0%{opacity:0;transform:translateY(-8px)} 50%{opacity:1;transform:translateY(0)} 100%{opacity:0;transform:translateY(8px)} }
+
+/* ── INFO BAR ── */
+.info-bar { background:var(--green); display:flex; justify-content:center; flex-wrap:wrap; }
+.info-item { display:flex; align-items:center; gap:13px; color:#fff; padding:22px 32px; border-right:1px solid rgba(255,255,255,.18); }
+.info-item:last-child { border-right:none; }
+.info-icon { font-size:24px; }
+.info-label { display:block; font-size:10px; text-transform:uppercase; letter-spacing:1.5px; opacity:.6; }
+.info-value { display:block; font-weight:800; font-size:15px; }
+
+/* ── LAYOUT ── */
+.wrap { max-width:1080px; margin:0 auto; padding:0 28px; }
+.section { padding:88px 0; }
+.tag { display:inline-block; font-size:10px; font-weight:800; letter-spacing:3px; text-transform:uppercase; color:var(--coral); margin-bottom:12px; }
+.section-title { font-family:var(--ft); font-size:clamp(32px,5vw,56px); line-height:1.06; margin-bottom:20px; }
+.section-title em { font-style:italic; color:var(--coral); }
+.section-title.white { color:#fff; }
+.section-title.white em { color:var(--sand); }
+.section-desc { font-size:17px; line-height:1.9; color:#666; max-width:640px; }
+
+/* ── A EXPEDIÇÃO ── */
+.exp-grid { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; margin-top:10px; }
+.exp-text { font-size:17px; line-height:1.9; color:#555; margin-bottom:22px; }
+.exp-foto { border-radius:24px; overflow:hidden; aspect-ratio:4/5; background:url('images/chapada1.png') center/cover no-repeat; background-color:var(--brown); position:relative; }
+
+.destinos-tags { display:flex; gap:10px; flex-wrap:wrap; margin-top:28px; }
+.destino-tag { display:flex; align-items:center; gap:8px; border-radius:40px; padding:10px 20px; font-size:13px; font-weight:700; }
+.destino-tag.chapada { background:rgba(96,134,82,.12); color:var(--green); border:1px solid rgba(96,134,82,.25); }
+.destino-tag.maranhenses { background:rgba(66,148,175,.12); color:var(--blue); border:1px solid rgba(66,148,175,.25); }
+
+/* ── ROTEIRO ── */
+.roteiro-section { background:#fff; }
+.roteiro-bloco { margin-top:54px; }
+.roteiro-bloco-title {
+  display:flex; align-items:center; gap:16px;
+  font-family:var(--ft); font-size:22px; font-weight:800;
+  margin-bottom:28px; padding-bottom:16px; border-bottom:2px solid;
+}
+.roteiro-bloco.chapada .roteiro-bloco-title { color:var(--green); border-color:var(--green); }
+.roteiro-bloco.maranhenses .roteiro-bloco-title { color:var(--blue); border-color:var(--blue); }
+.roteiro-bloco-badge { font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; padding:5px 14px; border-radius:20px; }
+.roteiro-bloco.chapada .roteiro-bloco-badge { background:rgba(96,134,82,.12); color:var(--green); }
+.roteiro-bloco.maranhenses .roteiro-bloco-badge { background:rgba(66,148,175,.12); color:var(--blue); }
+
+.roteiro-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.roteiro-maranhenses { grid-template-columns:repeat(3,1fr); }
+.dia-card { border-radius:20px; overflow:hidden; border:1.5px solid rgba(137,106,65,.13); transition:transform .3s,box-shadow .3s; }
+.dia-card:hover { transform:translateY(-6px); box-shadow:0 20px 55px rgba(0,0,0,.09); }
+.dia-header { padding:22px 24px; display:flex; justify-content:space-between; align-items:flex-start; }
+.chapada .dia-card:nth-child(1) .dia-header { background:var(--coral); }
+.chapada .dia-card:nth-child(2) .dia-header { background:var(--green); }
+.chapada .dia-card:nth-child(3) .dia-header { background:var(--brown); }
+.chapada .dia-card:nth-child(4) .dia-header { background:var(--sand); }
+.chapada .dia-card:nth-child(5) .dia-header { background:var(--blue); }
+.chapada .dia-card:nth-child(6) .dia-header { background:var(--coral); }
+.chapada .dia-card:nth-child(7) .dia-header { background:var(--green); }
+.maranhenses .dia-card:nth-child(1) .dia-header { background:var(--blue); }
+.maranhenses .dia-card:nth-child(2) .dia-header { background:var(--sand); }
+.maranhenses .dia-card:nth-child(3) .dia-header { background:var(--blue); }
+.dia-num { font-family:var(--ft); font-size:64px; font-weight:800; color:rgba(255,255,255,.2); line-height:1; }
+.dia-num-label { font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,.6); }
+.dia-body { padding:22px; background:var(--cream); }
+.dia-title { font-family:var(--ft); font-size:15px; font-weight:800; margin-bottom:12px; line-height:1.4; color:var(--dark); }
+.dia-list { list-style:none; display:flex; flex-direction:column; gap:8px; }
+.dia-list li { font-size:13px; color:#666; display:flex; gap:8px; line-height:1.5; }
+.dia-list li::before { content:'→'; color:var(--coral); font-weight:800; flex-shrink:0; }
+.dia-footer { background:var(--brown); color:rgba(255,255,255,.7); padding:12px 22px; font-size:12px; font-weight:700; display:flex; align-items:center; gap:8px; }
+.dia-footer span { font-size:14px; }
+
+/* ── GALERIA ── */
+.galeria-section { background:var(--dark); padding:88px 0; overflow:hidden; }
+.galeria-section .tag { color:var(--sand); }
+.galeria-section .section-title { color:#fff; }
+.galeria-section .section-title em { color:var(--coral); }
+.galeria-grid { display:grid; grid-template-columns:2fr 1fr 1fr; grid-template-rows:auto auto; gap:14px; margin-top:44px; }
+.galeria-item { border-radius:18px; overflow:hidden; background:center/cover no-repeat; background-color:var(--brown); position:relative; }
+.galeria-item::after { content:''; position:absolute; inset:0; background:linear-gradient(to top,rgba(0,0,0,.45),transparent 50%); }
+
+.gi-1 { grid-row:1/3; aspect-ratio:auto; min-height:460px; background-image:url('images/chapada2.png'); }
+.gi-2 { background-image:url('images/chapada3.png'); aspect-ratio:3/2; }
+.gi-3 { background-image:url('images/lencois1.png'); aspect-ratio:3/2; }
+.gi-4 { background-image:url('images/lencois2.png'); aspect-ratio:3/2; }
+.gi-5 { background-image:url('images/lencois3.png'); aspect-ratio:3/2; }
+
+/* ── INCLUSO ── */
+.incluso-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; margin-top:44px; }
+.incluso-col h3 { font-family:var(--ft); font-size:20px; margin-bottom:22px; padding-bottom:12px; border-bottom:2px solid; }
+.incluso-col:first-child h3 { color:var(--green); border-color:var(--green); }
+.incluso-col:last-child h3 { color:var(--coral); border-color:var(--coral); }
+.incluso-list { list-style:none; display:flex; flex-direction:column; gap:14px; }
+.incluso-list li { font-size:15px; color:#555; display:flex; align-items:flex-start; gap:10px; line-height:1.55; }
+.ic { color:var(--green); flex-shrink:0; font-size:18px; }
+.ix { color:var(--coral); flex-shrink:0; font-size:18px; }
+
+/* ── PERFIL FÍSICO ── */
+.nivel-section { background:var(--brown); }
+.nivel-section .tag { color:var(--sand); }
+.nivel-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+.nivel-text { font-size:17px; line-height:1.85; color:rgba(255,255,255,.72); margin-bottom:20px; }
+.nivel-card { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.13); border-radius:24px; padding:38px; }
+.nivel-row { margin:18px 0; }
+.nivel-row-label { display:flex; justify-content:space-between; font-size:11px; font-weight:800; color:rgba(255,255,255,.6); text-transform:uppercase; letter-spacing:1px; margin-bottom:8px; }
+.nivel-row-label span:last-child { color:var(--sand); }
+.nivel-bar-bg { height:8px; background:rgba(255,255,255,.1); border-radius:10px; overflow:hidden; }
+.nivel-bar-fill { height:100%; border-radius:10px; background:linear-gradient(to right,var(--coral),var(--sand)); }
+.nivel-note { margin-top:26px; background:rgba(255,255,255,.07); border-radius:14px; padding:18px 20px; text-align:center; font-size:14px; color:rgba(255,255,255,.7); line-height:1.65; border:1px solid rgba(255,255,255,.1); }
+.nivel-note strong { color:var(--sand); }
+.nivel-stats { display:flex; gap:14px; margin-top:28px; }
+.nivel-stat { flex:1; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.1); border-radius:16px; padding:20px; text-align:center; }
+.nivel-stat-num { font-family:var(--ft); font-size:38px; font-weight:800; color:var(--sand); line-height:1; }
+.nivel-stat-unit { font-size:13px; color:rgba(255,255,255,.5); font-weight:600; margin-top:4px; }
+.nivel-stat-label { font-size:11px; color:rgba(255,255,255,.4); text-transform:uppercase; letter-spacing:1px; margin-top:3px; }
+
+/* ── GRUPOS E VAGAS ── */
+.grupos-section { background:var(--cream); }
+.grupos-grid { display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-top:44px; }
+.grupo-card {
+  border-radius:26px; overflow:hidden;
+  border:1.5px solid rgba(137,106,65,.18);
+  transition:all .35s; cursor:pointer;
+}
+.grupo-card:hover { transform:translateY(-6px); box-shadow:0 24px 64px rgba(0,0,0,.1); }
+.grupo-card-header { padding:38px 36px; position:relative; overflow:hidden; }
+.grupo-card.maio .grupo-card-header { background:var(--coral); }
+.grupo-card.agosto .grupo-card-header { background:var(--blue); }
+.grupo-card-header::before { content:''; position:absolute; bottom:-40px; right:-40px; width:160px; height:160px; border-radius:50%; background:rgba(255,255,255,.08); }
+.grupo-num { font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,.6); margin-bottom:10px; }
+.grupo-mes { font-family:var(--ft); font-size:52px; font-weight:900; color:#fff; line-height:1; margin-bottom:6px; }
+.grupo-ano { font-size:14px; color:rgba(255,255,255,.55); font-weight:600; }
+.grupo-vagas-badge { position:absolute; top:28px; right:28px; background:rgba(255,255,255,.18); border-radius:30px; padding:8px 18px; font-size:13px; font-weight:800; color:#fff; }
+.grupo-card-body { padding:28px 36px 36px; background:#fff; }
+.grupo-info-row { display:flex; align-items:center; gap:10px; padding:12px 0; border-bottom:1px solid rgba(0,0,0,.06); font-size:14px; color:#555; }
+.grupo-info-row:last-child { border-bottom:none; }
+.grupo-info-row strong { color:var(--dark); margin-left:auto; font-weight:700; }
+.grupo-info-icon { font-size:16px; width:22px; text-align:center; }
+.grupo-cta { margin-top:24px; }
+.grupo-cta .btn { width:100%; text-align:center; font-size:15px; padding:16px; }
+.grupo-card.agosto .btn-blue { background:var(--blue); }
+
+/* ── FORMULÁRIO ── */
+.form-section { background:var(--dark); }
+.form-section .tag { color:var(--sand); }
+.form-section .section-title { color:#fff; }
+.form-section .section-title em { color:var(--coral); }
+.form-desc { font-size:16px; color:rgba(255,255,255,.58); line-height:1.75; max-width:560px; margin-bottom:48px; }
+.form-wrap { background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.1); border-radius:28px; padding:52px 48px; max-width:700px; }
+.form-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.form-group { display:flex; flex-direction:column; gap:8px; }
+.form-group.full { grid-column:1/-1; }
+label { font-size:12px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,.5); }
+input, select {
+  background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.12);
+  border-radius:12px; padding:14px 18px; color:#fff; font-family:var(--fb);
+  font-size:15px; transition:all .25s; outline:none; -webkit-appearance:none;
+}
+select { background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(255,255,255,0.4)' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 16px center; padding-right:42px; cursor:pointer; }
+select option { background:#2a2219; color:#fff; }
+input:focus, select:focus { border-color:var(--coral); background:rgba(255,255,255,.1); }
+input::placeholder { color:rgba(255,255,255,.25); }
+.form-submit { margin-top:28px; }
+.btn-submit {
+  width:100%; padding:18px; background:var(--coral); color:#fff;
+  border:none; border-radius:50px; font-family:var(--fb); font-weight:800;
+  font-size:16px; cursor:pointer; transition:all .3s;
+  box-shadow:0 10px 40px rgba(245,127,91,.4);
+}
+.btn-submit:hover { background:#e5703e; transform:translateY(-3px); }
+.btn-submit:disabled { opacity:.6; cursor:not-allowed; transform:none; }
+.form-msg { margin-top:18px; text-align:center; font-size:14px; font-weight:700; display:none; padding:14px; border-radius:12px; }
+.form-msg.success { background:rgba(96,134,82,.25); color:#a8d498; border:1px solid rgba(96,134,82,.3); display:block; }
+.form-msg.error { background:rgba(245,127,91,.2); color:#f5a583; border:1px solid rgba(245,127,91,.3); display:block; }
+.form-privacy { font-size:12px; color:rgba(255,255,255,.3); text-align:center; margin-top:14px; line-height:1.65; }
+
+/* ── FOOTER ── */
+footer { background:var(--brown); text-align:center; padding:36px 28px; }
+.footer-logo { width:64px; margin:0 auto 14px; }
+.footer-text { font-size:13px; color:rgba(255,255,255,.35); line-height:1.8; }
+.footer-text a { color:var(--coral); text-decoration:none; }
+.footer-slogan { font-family:var(--ft); font-style:italic; font-size:15px; color:rgba(255,255,255,.18); margin-top:8px; }
+.footer-wpp { margin-top:18px; }
+.footer-wpp a { color:rgba(255,255,255,.45); font-size:13px; text-decoration:none; }
+.footer-wpp a:hover { color:var(--sand); }
+
+/* ── REVEAL ── */
+.reveal { opacity:0; transform:translateY(30px); transition:opacity .75s ease,transform .75s ease; }
+.reveal.visible { opacity:1; transform:translateY(0); }
+
+/* ── RESPONSIVO ── */
+@media (max-width:800px) {
+  .wrap { padding:0 20px; }
+  .section { padding:64px 0; }
+  body { overflow-x:hidden; }
+
+  .hero { padding:110px 20px 72px; }
+  .hero-grupos { flex-direction:column; align-items:center; }
+  .grupo-badge { min-width:220px; }
+
+  .exp-grid,.nivel-grid,.incluso-grid,.grupos-grid { grid-template-columns:1fr; }
+  .roteiro-grid,.roteiro-maranhenses { grid-template-columns:1fr; }
+  .galeria-grid { grid-template-columns:1fr 1fr; grid-template-rows:auto; }
+  .gi-1 { grid-row:auto; grid-column:1/-1; min-height:240px; }
+
+  .form-wrap { padding:32px 24px; }
+  .form-grid { grid-template-columns:1fr; }
+  .form-group.full { grid-column:auto; }
+
+  .info-bar { flex-direction:column; align-items:stretch; }
+  .info-item { border-right:none; border-bottom:1px solid rgba(255,255,255,.15); padding:16px 24px; }
+  .info-item:last-child { border-bottom:none; }
+  .hero-photo { background-image:url('images/hero-mobile.png'); }
+  .nivel-stats { flex-direction:column; }
+  .grupo-card-header { padding:28px 26px; }
+  .grupo-card-body { padding:22px 26px 28px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ── NAVBAR ── -->
+<nav>
+  <div class="nav-inner">
+    <img src="images/logo.png" alt="Lençóis Trekking" class="nav-logo-img">
+    <span class="nav-brand">Lençóis Trekking</span>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-photo"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <div class="hero-dot"></div>
+      Insane Brazil Expedition · 10 Days
+    </div>
+    <h1 class="hero-title">
+      From Canyons
+      <span class="highlight">to Lagoons</span>
+    </h1>
+    <p class="hero-subtitle">Chapada Diamantina + Lençóis Maranhenses</p>
+    <p class="hero-desc">
+      A one-of-a-kind crossing: from the heart of Chapada Diamantina to the dunes of Maranhão.
+      96km on foot, two biomes, eight people per group — and landscapes that few have ever truly seen.
+    </p>
+    <div class="hero-grupos">
+      <div class="grupo-badge maio">
+        <div class="grupo-badge-label">Group 1</div>
+        <div class="grupo-badge-mes">May</div>
+        <div class="grupo-badge-vagas">8 spots · 2027</div>
+      </div>
+      <div class="grupo-badge agosto">
+        <div class="grupo-badge-label">Group 2</div>
+        <div class="grupo-badge-mes">August</div>
+        <div class="grupo-badge-vagas">8 spots · 2027</div>
+      </div>
+    </div>
+    <a href="#inscricao" class="btn btn-coral">Sign up now</a>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ── INFO BAR ── -->
+<div class="info-bar">
+  <div class="info-item">
+    <span class="info-icon">📅</span>
+    <div>
+      <span class="info-label">Duration</span>
+      <span class="info-value">10 days</span>
+    </div>
+  </div>
+  <div class="info-item">
+    <span class="info-icon">🥾</span>
+    <div>
+      <span class="info-label">Total trails</span>
+      <span class="info-value">96 km</span>
+    </div>
+  </div>
+  <div class="info-item">
+    <span class="info-icon">🗺️</span>
+    <div>
+      <span class="info-label">Destinations</span>
+      <span class="info-value">2 biomes</span>
+    </div>
+  </div>
+  <div class="info-item">
+    <span class="info-icon">👥</span>
+    <div>
+      <span class="info-label">Per group</span>
+      <span class="info-value">Max. 8 people</span>
+    </div>
+  </div>
+  <div class="info-item">
+    <span class="info-icon">🌙</span>
+    <div>
+      <span class="info-label">Accommodation</span>
+      <span class="info-value">9 nights</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── A EXPEDIÇÃO ── -->
+<section class="section">
+  <div class="wrap">
+    <div class="exp-grid">
+      <div class="reveal">
+        <span class="tag">The expedition</span>
+        <h2 class="section-title">Two worlds.<br><em>One journey.</em></h2>
+        <p class="exp-text">
+          Vale do Pati is considered one of the most beautiful trekking destinations in Brazil — mountain ranges, hidden waterfalls, and accommodation in locals' homes that preserve the soul of Chapada Diamantina.
+        </p>
+        <p class="exp-text">
+          Lençóis Maranhenses is a unique phenomenon on the planet: white dunes that transform into hundreds of crystal-clear lagoons between May and August — and a UNESCO Natural Heritage site. Few people get there on foot, the right way.
+        </p>
+        <p class="exp-text">
+          On this expedition you do both back-to-back, with a specialist guide, full logistics, and a small group of people who also chose the wilder path.
+        </p>
+        <div class="destinos-tags">
+          <span class="destino-tag chapada">🌿 Chapada Diamantina – BA · 64km</span>
+          <span class="destino-tag maranhenses">🌊 Lençóis Maranhenses – MA · 32km</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="exp-foto" style="background-image:url('images/chapada1.png')"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ROTEIRO ── -->
+<section class="section roteiro-section">
+  <div class="wrap">
+    <span class="tag">The itinerary</span>
+    <h2 class="section-title">10 days,<br><em>day by day.</em></h2>
+
+    <!-- CHAPADA DIAMANTINA -->
+    <div class="roteiro-bloco chapada">
+      <div class="roteiro-bloco-title">
+        🌿 Chapada Diamantina
+        <span class="roteiro-bloco-badge">Days 1–7 · Bahia</span>
+      </div>
+      <div class="roteiro-grid">
+
+        <div class="dia-card reveal">
+          <div class="dia-header">
+            <div>
+              <div class="dia-num-label">Dia</div>
+              <div class="dia-num">01</div>
+            </div>
+          </div>
+          <div class="dia-body">
+            <div class="dia-title">Transfer & arrival in Lençóis</div>
+            <ul class="dia-list">
+              <li>Van departure from Salvador</li>
+              <li>Arrival in the town of Lençóis</li>
+              <li>Orientation and expedition briefing</li>
+            </ul>
+          </div>
+          <div class="dia-footer"><span>🌙</span> Lençóis – Guesthouse</div>
+        </div>
+
+        <div class="dia-card reveal">
+          <div class="dia-header">
+            <div>
+              <div class="dia-num-label">Dia</div>
+              <div class="dia-num">02</div>
+            </div>
+          </div>
+          <div class="dia-body">
+            <div class="dia-title">Trekking in Vale do Pati</div>
+            <ul class="dia-list">
+              <li>Start of the valley crossing</li>
+              <li>Trails with panoramic views</li>
+              <li>Mountain range and savanna landscapes</li>
+            </ul>
+          </div>
+          <div class="dia-footer"><span>🌙</span> Vale do Pati – Locals' home</div>
+        </div>
+
+        <div class="dia-card reveal">
+          <div class="dia-header">
+            <div>
+              <div class="dia-num-label">Dia</div>
+              <div class="dia-num">03</div>
+            </div>
+          </div>
+          <div class="dia-body">
+            <div class="dia-title">Trekking in Vale do Pati</div>
+            <ul class="dia-list">
+              <li>Continuing the crossing</li>
+              <li>Waterfalls and interior viewpoints</li>
+              <li>Immersion in locals' way of life</li>
+            </ul>
+          </div>
+          <div class="dia-footer"><span>🌙</span> Vale do Pati – Locals' home</div>
+        </div>
+
+        <div class="dia-card reveal">
+          <div class="dia-header">
+            <div>
+              <div class="dia-num-label">Dia</div>
+              <div class="dia-num">04</div>
+            </div>
+          </div>
+          <div class="dia-body">
+            <div class="dia-title">Trekking · Leaving Pati</div>
+            <ul class="dia-list">
+              <li>Final stretch of the Pati crossing</li>
+              <li>Transfer to Mucugê</li>
+              <li>Rest after 3 days of trekking</li>
+            </ul>
+          </div>
+          <div class="dia-footer"><span>🌙</span> Mucugê – Guesthouse</div>
+        </div>
+
+        <div class="dia-card reveal">
+          <div class="dia-header">
+            <div>
+              <div class="dia-num-label">Dia</div>
+              <div class="dia-num">05</div>
+            </div>
+          </div>
+          <div class="dia-body">
+            <div class="dia-title">Buracão Waterfall</div>
+            <ul class="dia-list">
+              <li>Visita à Buracão Waterfall</li>
+              <li>Canyon and natural pools</li>
+              <li>Overnight in Ibicoara</li>
+            </ul>
+          </div>
+          <div class="dia-footer"><span>🌙</span> Ibicoara – Locals' home</div>
+        </div>
+
+        <div class="dia-card reveal">
+          <div class="dia-header">
+            <div>
+              <div class="dia-num-label">Dia</div>
+              <div class="dia-num">06</div>
+            </div>
+          </div>
+          <div class="dia-body">
+            <div class="dia-title">Fumacinha Waterfall</div>
+            <ul class="dia-list">
+              <li>Trilha até a Fumacinha Waterfall</li>
+              <li>Aerial view of Brazil's tallest free-fall waterfall</li>
+              <li>Return to Mucugê</li>
+            </ul>
+          </div>
+          <div class="dia-footer"><span>🌙</span> Mucugê – Guesthouse</div>
+        </div>
+
+        <div class="dia-card reveal">
+          <div class="dia-header">
+            <div>
+              <div class="dia-num-label">Dia</div>
+              <div class="dia-num">07</div>
+            </div>
+          </div>
+          <div class="dia-body">
+            <div class="dia-title">Mucugê → Salvador → São Luís</div>
+            <ul class="dia-list">
+              <li>Transfer Mucugê – Salvador</li>
+              <li>Flight to São Luís do Maranhão</li>
+              <li>Beginning of the second chapter</li>
+            </ul>
+          </div>
+          <div class="dia-footer"><span>🌙</span> São Luís – Hotel</div>
+        </div>
+
+      </div><!-- /roteiro-grid chapada -->
+    </div><!-- /roteiro-bloco chapada -->
+
+    <!-- LENÇÓIS MARANHENSES -->
+    <div class="roteiro-bloco maranhenses" style="margin-top:52px;">
+      <div class="roteiro-bloco-title">
+        🌊 Lençóis Maranhenses
+        <span class="roteiro-bloco-badge">Days 8–10 · Maranhão</span>
+      </div>
+      <div class="roteiro-grid roteiro-maranhenses">
+
+        <div class="dia-card reveal">
+          <div class="dia-header">
+            <div>
+              <div class="dia-num-label">Dia</div>
+              <div class="dia-num">08</div>
+            </div>
+          </div>
+          <div class="dia-body">
+            <div class="dia-title">São Luís → Barreirinhas + Trekking</div>
+            <ul class="dia-list">
+              <li>Transfer São Luís – Barreirinhas</li>
+              <li>Entering Lençóis Maranhenses</li>
+              <li>First crystal-clear lagoons</li>
+            </ul>
+          </div>
+          <div class="dia-footer"><span>🌙</span> Lençóis Maranhenses – Accommodation</div>
+        </div>
+
+        <div class="dia-card reveal">
+          <div class="dia-header">
+            <div>
+              <div class="dia-num-label">Dia</div>
+              <div class="dia-num">09</div>
+            </div>
+          </div>
+          <div class="dia-body">
+            <div class="dia-title">Trekking – Dunes and Lagoons</div>
+            <ul class="dia-list">
+              <li>Crossing the white dunes</li>
+              <li>Swimming in crystal-clear lagoons</li>
+              <li>A landscape unique on the planet</li>
+            </ul>
+          </div>
+          <div class="dia-footer"><span>🌙</span> Lençóis Maranhenses – Accommodation</div>
+        </div>
+
+        <div class="dia-card reveal">
+          <div class="dia-header">
+            <div>
+              <div class="dia-num-label">Dia</div>
+              <div class="dia-num">10</div>
+            </div>
+          </div>
+          <div class="dia-body">
+            <div class="dia-title">Final trekking + Return</div>
+            <ul class="dia-list">
+              <li>Last stretch of dunes on foot</li>
+              <li>Transfer Santo Amaro – São Luís</li>
+              <li>End of the expedition</li>
+            </ul>
+          </div>
+          <div class="dia-footer"><span>🌙</span> São Luís – End of the expedition</div>
+        </div>
+
+      </div>
+    </div><!-- /roteiro-bloco maranhenses -->
+  </div>
+</section>
+
+<!-- ── GALERIA ── -->
+<section class="galeria-section">
+  <div class="wrap">
+    <span class="tag">Gallery</span>
+    <h2 class="section-title">The Brazil <em>few ever see.</em></h2>
+    <div class="galeria-grid">
+      <div class="galeria-item gi-1"></div>
+      <div class="galeria-item gi-2"></div>
+      <div class="galeria-item gi-3"></div>
+      <div class="galeria-item gi-4"></div>
+      <div class="galeria-item gi-5"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── INCLUSO / NÃO INCLUSO ── -->
+<section class="section">
+  <div class="wrap">
+    <span class="tag">Package</span>
+    <h2 class="section-title">What's <em>included.</em></h2>
+    <div class="incluso-grid reveal">
+      <div class="incluso-col">
+        <h3>✓ Included</h3>
+        <ul class="incluso-list">
+          <li><span class="ic">✓</span> 9 nights de hospedagem (Chapada, São Luís e Lençóis Maranhenses)</li>
+          <li><span class="ic">✓</span> Specialist guide throughout the expedition</li>
+          <li><span class="ic">✓</span> Transportation to all attractions</li>
+          <li><span class="ic">✓</span> Transfer Salvador – Lençóis (one way)</li>
+          <li><span class="ic">✓</span> Transfer São Luís – Barreirinhas – São Luís</li>
+          <li><span class="ic">✓</span> Full meals during trekking days</li>
+          <li><span class="ic">✓</span> Attraction entry fees</li>
+          <li><span class="ic">✓</span> Adventure Insurance</li>
+        </ul>
+      </div>
+      <div class="incluso-col">
+        <h3>✗ Not included</h3>
+        <ul class="incluso-list">
+          <li><span class="ix">✗</span> Flights (Salvador / São Luís and return)</li>
+          <li><span class="ix">✗</span> Alcoholic drinks and sodas</li>
+          <li><span class="ix">✗</span> Meals outside of trekking days</li>
+          <li><span class="ix">✗</span> Personal expenses</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PERFIL FÍSICO ── -->
+<section class="section nivel-section">
+  <div class="wrap">
+    <div class="nivel-grid">
+      <div class="reveal">
+        <span class="tag" style="color:var(--sand)">Physical profile</span>
+        <h2 class="section-title white">For those <em>who are ready.</em></h2>
+        <p class="nivel-text">
+          Esta expedição exige preparo físico real. São 10 days de caminhada com mochila, em terrenos variados, sol forte e distâncias consideráveis por dia.
+        </p>
+        <p class="nivel-text">
+          The minimum requirement is exercising regularly — hiking, running, gym, or any activity that keeps your body ready for long days on foot.
+        </p>
+        <div class="nivel-stats">
+          <div class="nivel-stat">
+            <div class="nivel-stat-num">64</div>
+            <div class="nivel-stat-unit">km</div>
+            <div class="nivel-stat-label">in Chapada</div>
+          </div>
+          <div class="nivel-stat">
+            <div class="nivel-stat-num">32</div>
+            <div class="nivel-stat-unit">km</div>
+            <div class="nivel-stat-label">in Lençóis</div>
+          </div>
+          <div class="nivel-stat">
+            <div class="nivel-stat-num">96</div>
+            <div class="nivel-stat-unit">km</div>
+            <div class="nivel-stat-label">total</div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="nivel-card">
+          <div class="nivel-row">
+            <div class="nivel-row-label"><span>Physical endurance</span><span>High</span></div>
+            <div class="nivel-bar-bg"><div class="nivel-bar-fill" style="width:80%"></div></div>
+          </div>
+          <div class="nivel-row">
+            <div class="nivel-row-label"><span>Daily distance</span><span>Moderada–High</span></div>
+            <div class="nivel-bar-bg"><div class="nivel-bar-fill" style="width:70%"></div></div>
+          </div>
+          <div class="nivel-row">
+            <div class="nivel-row-label"><span>Technical difficulty</span><span>Intermediate</span></div>
+            <div class="nivel-bar-bg"><div class="nivel-bar-fill" style="width:55%"></div></div>
+          </div>
+          <div class="nivel-row">
+            <div class="nivel-row-label"><span>Terrain variety</span><span>High</span></div>
+            <div class="nivel-bar-bg"><div class="nivel-bar-fill" style="width:85%"></div></div>
+          </div>
+          <div class="nivel-note">
+            <strong>Level: Intermediate</strong><br>
+            We recommend regular exercise in the 2–3 months before the expedition. No climbing experience required.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── GRUPOS ── -->
+<section class="section grupos-section" id="grupos">
+  <div class="wrap">
+    <span class="tag">Groups & spots</span>
+    <h2 class="section-title">Choose your <em>group.</em></h2>
+    <div class="grupos-grid">
+      <!-- GRUPO 1 – MAIO -->
+      <div class="grupo-card maio reveal">
+        <div class="grupo-card-header">
+          <div class="grupo-num">Group 1</div>
+          <div class="grupo-mes">May</div>
+          <div class="grupo-ano">2027 · dates to be confirmed</div>
+          <div class="grupo-vagas-badge">8 spots</div>
+        </div>
+        <div class="grupo-card-body">
+          <div class="grupo-info-row">
+            <span class="grupo-info-icon">🌿</span>
+            <span>Chapada Diamantina</span>
+            <strong>May</strong>
+          </div>
+          <div class="grupo-info-row">
+            <span class="grupo-info-icon">🌊</span>
+            <span>Lençóis Maranhenses</span>
+            <strong>May</strong>
+          </div>
+          <div class="grupo-info-row">
+            <span class="grupo-info-icon">👥</span>
+            <span>Exclusive group</span>
+            <strong>Max. 8 people</strong>
+          </div>
+          <div class="grupo-info-row">
+            <span class="grupo-info-icon">🥾</span>
+            <span>Total trails</span>
+            <strong>96 km</strong>
+          </div>
+          <div style="text-align:center;margin-top:20px;padding:16px;background:rgba(245,127,91,.07);border-radius:16px;border:1px solid rgba(245,127,91,.2)">
+            <span style="display:block;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#999;margin-bottom:4px">Price per person</span>
+            <span style="font-family:'Raleway',sans-serif;font-size:36px;font-weight:900;color:#f57f5b;line-height:1">R$ 9.900</span>
+          </div>
+          <div class="grupo-cta">
+            <a href="#inscricao" class="btn btn-coral" onclick="document.querySelector('#grupo').value='Group 1 – May'">I want the May Group</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- GRUPO 2 – AGOSTO -->
+      <div class="grupo-card agosto reveal">
+        <div class="grupo-card-header">
+          <div class="grupo-num">Group 2</div>
+          <div class="grupo-mes">August</div>
+          <div class="grupo-ano">2027 · dates to be confirmed</div>
+          <div class="grupo-vagas-badge">8 spots</div>
+        </div>
+        <div class="grupo-card-body">
+          <div class="grupo-info-row">
+            <span class="grupo-info-icon">🌿</span>
+            <span>Chapada Diamantina</span>
+            <strong>August</strong>
+          </div>
+          <div class="grupo-info-row">
+            <span class="grupo-info-icon">🌊</span>
+            <span>Lençóis Maranhenses</span>
+            <strong>August</strong>
+          </div>
+          <div class="grupo-info-row">
+            <span class="grupo-info-icon">👥</span>
+            <span>Exclusive group</span>
+            <strong>Max. 8 people</strong>
+          </div>
+          <div class="grupo-info-row">
+            <span class="grupo-info-icon">🥾</span>
+            <span>Total trails</span>
+            <strong>96 km</strong>
+          </div>
+          <div style="text-align:center;margin-top:20px;padding:16px;background:rgba(66,148,175,.07);border-radius:16px;border:1px solid rgba(66,148,175,.2)">
+            <span style="display:block;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#999;margin-bottom:4px">Price per person</span>
+            <span style="font-family:'Raleway',sans-serif;font-size:36px;font-weight:900;color:#4294af;line-height:1">R$ 9.900</span>
+          </div>
+          <div class="grupo-cta">
+            <a href="#inscricao" class="btn btn-blue" onclick="document.querySelector('#grupo').value='Group 2 – August'">I want the August Group</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FORMULÁRIO ── -->
+<section class="section form-section" id="inscricao">
+  <div class="wrap">
+    <span class="tag">Sign up</span>
+    <h2 class="section-title">Secure your <em>spot.</em></h2>
+    <p class="form-desc">
+      Fill in the details below and our team will get in touch to confirm your registration and share all information about the package.
+    </p>
+    <div class="form-wrap reveal">
+      <div class="form-grid">
+        <div class="form-group full">
+          <label for="nome">Full name</label>
+          <input type="text" id="nome" placeholder="Your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="seu@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="telefone">WhatsApp / Phone</label>
+          <input type="tel" id="telefone" placeholder="+1 (xxx) xxx-xxxx" required>
+        </div>
+        <div class="form-group">
+          <label for="nascimento">Date of birth</label>
+          <input type="date" id="nascimento" required>
+        </div>
+        <div class="form-group">
+          <label for="grupo">Group of interest</label>
+          <select id="grupo" required>
+            <option value="" disabled selected>Select a group</option>
+            <option value="Group 1 – May">Group 1 – May 2027</option>
+            <option value="Group 2 – August">Group 2 – August 2027</option>
+            <option value="Either group">Either group</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="trekking">Have you trekked before?</label>
+          <select id="trekking" required>
+            <option value="" disabled selected>Select</option>
+            <option value="Never">Never</option>
+            <option value="Short trails (up to 10km)">Short trails (up to 10km)</option>
+            <option value="Long trails (10–25km)">Long trails (10–25km)</option>
+            <option value="Multi-day trekking">Multi-day trekking</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-submit">
+        <button class="btn-submit" id="btn-submit" onclick="enviarFormulario()">
+          Send registration →
+        </button>
+      </div>
+      <div class="form-msg" id="form-msg"></div>
+      <p class="form-privacy">Your data is used only to contact you about this expedition. No spam.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <img src="images/logo.png" alt="Lençóis Trekking" class="footer-logo">
+  <p class="footer-text">
+    © 2027 Lençóis Trekking · <a href="https://lencoistrekking.com" target="_blank">lencoistrekking.com</a>
+  </p>
+  <div class="footer-wpp">
+    <a href="https://wa.me/5575998694091" target="_blank">📱 +55 75 9869-4091</a>
+  </div>
+  <div style="margin-top:16px">
+    <a href="https://wa.me/5575998694091?text=Hi!%20I'm%20interested%20in%20signing%20up%20for%20the%20Insane%20Brazil%20Expedition%20in%202027." target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#fff;font-family:'Poppins',sans-serif;font-weight:800;font-size:15px;padding:14px 32px;border-radius:50px;text-decoration:none;box-shadow:0 8px 28px rgba(37,211,102,.4)">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Chat on WhatsApp
+    </a>
+  </div>
+  <p class="footer-slogan">The mountain teaches those brave enough to listen.</p>
+</footer>
+
+<script>
+/* ── REVEAL ON SCROLL ── */
+const revealEls = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.12 });
+revealEls.forEach(el => observer.observe(el));
+
+/* ── FORMULÁRIO → APPS SCRIPT ── */
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz0VaI6yRjLf0D80ADeAS7LYOJvZQf_QLsPzvRjqCDwuhI2UHbqOHhKpdeA8X4Hp_n_/exec';
+
+async function enviarFormulario() {
+  const btn = document.getElementById('btn-submit');
+  const msg = document.getElementById('form-msg');
+
+  const campos = {
+    nome:       document.getElementById('nome').value.trim(),
+    email:      document.getElementById('email').value.trim(),
+    telefone:   document.getElementById('telefone').value.trim(),
+    nascimento: document.getElementById('nascimento').value,
+    grupo:      document.getElementById('grupo').value,
+    trekking:   document.getElementById('trekking').value,
+  };
+
+  if (!campos.nome || !campos.email || !campos.telefone || !campos.nascimento || !campos.grupo || !campos.trekking) {
+    msg.className = 'form-msg error';
+    msg.textContent = 'Please fill in all fields before submitting.';
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+  msg.className = 'form-msg';
+  msg.style.display = 'none';
+
+  try {
+    await fetch(APPS_SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ...campos, timestamp: new Date().toISOString() }),
+    });
+    msg.className = 'form-msg success';
+    msg.textContent = '✓ Sign up enviada! Nossa equipe entra em contato em breve pelo WhatsApp ou e-mail.';
+    btn.textContent = 'Sign up enviada ✓';
+    gtag('event', 'form_submit', { event_category: 'inscricao', event_label: campos.grupo });
+  } catch (err) {
+    msg.className = 'form-msg error';
+    msg.textContent = 'Error sending. Please try again or contact us on WhatsApp: +55 75 9869-4091';
+    btn.disabled = false;
+    btn.textContent = 'Send registration →';
+  }
+}
+</script>
+
+</body>
+</html>
